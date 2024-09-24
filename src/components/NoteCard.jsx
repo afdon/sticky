@@ -1,15 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const NoteCard = ({ note }) => {
     let mouseStartPos = { x: 0, y: 0 };
 
     const [position, setPosition] = useState(JSON.parse(note.position));
     const body = bodyParser(note.body);
-
-    useEffect(() => {
-        autoGrow(textAreaRef);
-        setZIndex(cardRef.current);
-    }, []);
 
     const mouseDown = (e) => {
         if (e.target.className === "card-header") {
