@@ -1,8 +1,11 @@
 const NoteCard = ({ note }) => {
-    
-    const [position, setPosition] = useState(JSON.parse(note.position));
+  let mouseStartPos = { x: 0, y: 0 };
 
-    const body = JSON.parse(note.body);
- 
-    return <div>{body}</div>;
+  const cardRef = useRef(null);
+
+  const [position, setPosition] = useState(JSON.parse(note.position));
+
+  const body = JSON.parse(note.body);
+
+  return <div>{body}</div>;
 };
