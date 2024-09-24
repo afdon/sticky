@@ -12,4 +12,4 @@ const NotesPage = () => {
     );
 };
 
-export default NotesPage;
+export default NotesPage; 
