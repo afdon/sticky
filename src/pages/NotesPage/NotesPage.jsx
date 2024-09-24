@@ -1,12 +1,16 @@
-import { fakeData as notes } from "../assets/fakeData.js";
-import NoteCard from "../components/NoteCard";
+const NoteCard = ({ note }) => {
+    let position = JSON.parse(note.position);
+    const colors = JSON.parse(note.colors);
+    const body = JSON.parse(note.body);
  
-const NotesPage = () => {
     return (
-        <div>
-            {notes.map((note) => (
-                <NoteCard note={note} key={note.$id} />
-            ))}
+        <div
+            className="card"
+            style={{
+                backgroundColor: colors.colorBody,
+            }}
+        >
+            {body}
         </div>
     );
 };
